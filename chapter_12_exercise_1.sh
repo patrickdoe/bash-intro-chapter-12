@@ -5,6 +5,7 @@ boot_image=$1
 save_device=$2
 
 # Check arguments
+# "$#" holds the number of arguments, -ne 2 means "not equal to 2" i.e. there has to be 2 arguments
 if [ "$#" -ne 2 ]; then
     echo "How to: $0 <BOOT_IMAGE.IMG> <SAVE DEVICE>"
     exit 1
@@ -17,6 +18,7 @@ noquit_trap() {
 }
 
 # Define what type of signal to trap, SIGINT = CTRL+C.
+# trap checks for SIGINT and refers to the noquit_trap() function if a SIGINT is detected.
 trap noquit_trap SIGINT
 
 # Start the writing process using dd
