@@ -19,7 +19,7 @@ cd "$build_dir"
 sleep 1
 
 # Download the application: -q for "quiet" and -O for "output file"
-echo -e "> Downloading Netofetch...\n"
+echo -e "> Downloading Fastfetch...\n"
 wget -q "$download_url" -O "2.31.0.tar.gz"
 sleep 1
 
@@ -36,7 +36,7 @@ cmake --build build			# Build and store files in the "build" directory
 sleep 1
 
 # Install the package
-echo -e "\n> Installing Neofetch...\n"
+echo -e "\n> Installing Fastfetch...\n"
 cmake --install build		# Install from the compiled files in the "build" directory
 sleep 1
 
@@ -46,5 +46,5 @@ rm -rf "$BUILD_DIR"
 sleep 1
 
 # Confirm installation
-echo -e "> Neofetch has been installed successfully!\n"
+echo -e "> Fastfetch has been installed successfully!\n"
 
